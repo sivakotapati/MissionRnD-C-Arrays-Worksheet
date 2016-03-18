@@ -41,7 +41,7 @@ struct student ** topKStudents(struct student *students, int len, int K) {
 			}
 		}
 		if (max != i){
-			//swapping scores
+			//swapping 
 			s[0]= students[i];
 			students[i]= students[max];
 			students[max] = s[0];
