@@ -22,7 +22,10 @@ int removeArrayDuplicates(int *Arr, int len)
 	quickSort(Arr,0,len-1);
 
 	int i,j=0;
-	for (i = 1; i < len;i++){
+	//start i,j at 0
+	//traverse through the sorted using i when Arr[i] is not equal to Arr[j] only then copy that element to Arr[j] and incremnet j
+	//repeat till endo of string,j will be new length of string after removing duplicates
+	for (i = 0; i < len;i++){
 		if (Arr[i] != Arr[j]){
 			j++;
 			Arr[j] = Arr[i];
