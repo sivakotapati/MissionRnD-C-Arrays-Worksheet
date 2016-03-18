@@ -42,14 +42,9 @@ struct student ** topKStudents(struct student *students, int len, int K) {
 		}
 		if (max != i){
 			//swapping scores
-			t = students[i].score;
-			students[i].score = students[max].score;
-			students[max].score = t;
-
-			/*//swapping names
-			strcpy(tname, students[i].name);
-			strcpy(students[i].name, students[max].name);
-			strcpy(students[max].name, tname);*/
+			s[0]= students[i];
+			students[i]= students[max];
+			students[max] = s[0];
 		}
 	}
 	if (K > len)
