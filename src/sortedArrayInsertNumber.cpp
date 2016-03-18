@@ -18,13 +18,9 @@ int * sortedArrayInsertNumber(int *Arr, int len, int num)
 {
 	int i,pos;
 	if (Arr == NULL || len <= 0) return NULL;
-	int *newp = (int *)realloc(Arr, (len + 1)*sizeof(int));
-	if (newp != NULL){
-		Arr = newp;
-	}
-	else{
-		return NULL;
-	}
+
+	Arr = (int *)realloc(Arr, (len + 1)*sizeof(int));
+
 	len = len + 1;//updating array length to insert num in the array 
 
 	if (num <= Arr[0]){//if num is <= first element then insert at first
