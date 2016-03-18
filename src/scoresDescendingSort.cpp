@@ -25,7 +25,8 @@ void * scoresDescendingSort(struct student *students, int len) {
 		return NULL;
 	int i, j, max, t;
 	char tname[10];
-	//sorting
+
+	//selection sorting
 	for (i = 0; i < len - 1; i++){
 		max = i;
 		for (j = i + 1; j < len; j++){
