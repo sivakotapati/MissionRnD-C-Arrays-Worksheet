@@ -54,10 +54,7 @@ struct student ** topKStudents(struct student *students, int len, int K) {
 	}
 	if (K > len)
 		K = len;
-	/*for (i =0; i<K; i--){
-		strcpy((*s[i]).name,students[i].name);
-		(*s[i]).score = students[i].score;
-	}*/
+	
 	for (i = 0; i < K; i++){
 		s1[i] = &students[i];
 	}
